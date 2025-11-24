@@ -43,11 +43,7 @@ export default {
         headers
       })
     } catch (error) {
-      console.log({ error })
       return new Response(`Oops! ${error?.message}`, { status: 400 })
-
     }
-
-
   }
 };
