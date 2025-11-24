@@ -15,7 +15,7 @@ const headers = {
 export default {
   async fetch(request, env, ctx) {
 
-    //https://addons-proxy.shodaime.workers.dev/s/jkzhejhfkzjhekljhkzefkze/1/manifest.json for exemple
+    //https://addons.example.app/s/jkzhejhfkzjhekljhkzefkze/1/manifest.json for exemple
     const url = new URL(request.url);
     const match = url.pathname.match(/^\/s\/([^/]+)\/(.+?)\/(.+)$/);
     if (!match) return new Response('Not Found', { status: 404 });
